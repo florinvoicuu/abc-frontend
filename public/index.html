@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Node Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <base href="/">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="app/style.css">
+
+    <!-- 1. Load libraries -->
+    <!-- Configure SystemJS -->
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script>
+        System.config({
+            defaultJSExtensions: true,
+            map: {
+                'angular2':             'node_modules/angular2',
+                'angular2-cookie':      'node_modules/angular2-cookie',
+                'es6-shim':             'node_modules/es6-shim',
+                'reflect-metadata':     'node_modules/reflect-metadata',
+                'rxjs':                 'node_modules/rxjs',
+                'systemjs':             'node_modules/systemjs',
+
+                //Other libraries
+                'underscore':           'node_modules/underscore/underscore-min.js'
+            }
+        });
+    </script>
+
+    <!-- Angular libraries -->
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+    <script src="node_modules/angular2/bundles/angular2-polyfills.min.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.min.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.min.js"></script>
+    <script src="node_modules/angular2/bundles/router.min.js"></script>
+    <script src="node_modules/angular2/bundles/http.min.js"></script>
+    <script src="node_modules/angular2-cookie/bundles/angular2-cookie.min.js"></script>
+
+    <!-- Other libraries -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script>
+        System.import('main').then(null, console.error.bind(console));
+    </script>
+</head>
+<!-- 3. Display the application -->
+<body>
+<app></app>
+</body>
+</html>
